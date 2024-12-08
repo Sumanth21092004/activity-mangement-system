@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Student Extracurricular Activities Management System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Light Blue Background as fallback */
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Fullscreen Section */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-image: url('/images/home3.jpg'); /* Path to your image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            animation: fadeIn 2s ease-out; /* Add fade-in animation */
+        }
+
+        /* Overlay to darken background */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
+            z-index: 1;
+        }
+
+        /* Content inside hero-section */
+        .content {
+            z-index: 2;
+            position: relative;
+            padding: 30px;
+        }
+
+        /* Header Text Styling */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ffffff; /* White text color */
+            font-weight: bold;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        /* Paragraph Text Styling */
+        p {
+            font-size: 1.5rem;
+            color: #ffffff; /* White text color */
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Action Buttons Styling */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .btn {
+            background-color: #03A9F4; /* Light blue for call-to-action */
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0288D1; /* Darker blue on hover */
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Student Extracurricular Activities Management System</h1>
+            <p>Manage and participate in various extracurricular activities seamlessly. Join us today and explore new opportunities!</p>
+
+            <div class="action-buttons">
+                <!-- Login Link -->
+                <a href="#" th:href="@{/showLoginPage}" class="btn">Login</a>
+                <!-- Register Link -->
+                <a href="#" th:href="@{/register/showRegistrationForm}" class="btn">Register</a>
+                <!-- Contact Us Link -->
+                <a href="#" th:href="@{/contact}" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

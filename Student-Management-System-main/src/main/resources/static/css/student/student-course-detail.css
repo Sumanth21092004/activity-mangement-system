@@ -1,0 +1,107 @@
+h3 {
+	font-size: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: center;	
+}
+
+thead {
+	height: 1.5em;
+	text-align: center;	
+}
+
+th {
+	background-color: #ffaa16;
+	color: white;
+}
+
+th, td {
+	width: 15%;
+	padding-left: 0.3em;
+}
+
+#table-top-left {
+	border-top-left-radius: 8px;
+}
+
+#table-top-right {
+	border-top-right-radius: 8px;
+}
+
+tr {
+	height: 47px;
+	background-color: #f0f0f5;
+}
+
+.card {
+	display: inline-block;
+	width: 35%; /* Increased from 30% to 35% */
+	max-width: 300px; /* Increased max width */
+	min-width: 180px; /* Increased min width */
+	text-align: center;    
+	margin: 2%;
+	margin-left: 0px;
+	position: relative;
+}
+
+.card a {
+	text-decoration: none;
+	display: block;
+	background-color: #1367c8;
+	border-radius: 5px;
+	height: 90px;
+}
+
+.card a:hover {
+	background-color: rgba(19, 103, 200, 0.7);
+}
+
+.fa-clipboard-list {
+	color: rgba(19, 103, 200, 1);
+}
+
+.card i {
+	width: 40px;
+	line-height: 40px;
+	border-radius: 100px;
+	background-color: #f7f8fa;
+	font-size: 20px;
+	position: absolute;
+	left: 15%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.card span {
+	font-size: 16px; /* Reduced from 20px to 16px */
+	color: #f7f8fa;
+}
+
+#card-name {
+	line-height: 20px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateY(-30%);
+}
+
+#card-day {
+	font-size: 14px; /* Increased font size for due date */
+	line-height: 20px;
+	position: absolute;
+	top: 60%; /* Moved it a little higher */
+	left: 10%; /* Aligns the due date closer to the left side */
+	transform: translateY(-60%);
+}
+
+@media screen and (max-width: 557px) {
+  .card-container {
+  	width: 165px;
+  }
+  
+  .card {
+  	margin-bottom: 10px;
+  }
+}
